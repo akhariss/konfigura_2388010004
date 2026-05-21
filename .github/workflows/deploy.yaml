@@ -37,4 +37,4 @@ jobs:
             docker rm -f konfigura_2388010004 || true
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/konfigura_2388010004:latest
             docker run -d --name konfigura_2388010004 --restart unless-stopped -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/konfigura_2388010004:latest
-            # Tambahkan perintah lain jika diperlukan, seperti migrasi database atau konfigurasi tambahan
+            
