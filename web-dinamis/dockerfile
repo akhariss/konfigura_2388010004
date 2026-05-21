@@ -34,3 +34,4 @@ COPY --from=builder /app/public ./.next/public
 EXPOSE 3000
 
 CMD ["node", ".next/standalone/server.js"]
+#FROM node:24-alpine AS builder
