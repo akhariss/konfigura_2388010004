@@ -26,7 +26,7 @@ jobs:
           context: ./web-dinamis
           file: ./web-dinamis/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-dinamis_2388010004:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-dinamis:latest
       
   deploy-to-ec2:
     runs-on: ubuntu-latest
