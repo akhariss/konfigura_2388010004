@@ -26,7 +26,7 @@ jobs:
           context: ./web-dinamis
           file: ./web-dinamis/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-dinamis_2388010027:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-dinamis_2388010004:latest
       
   deploy-to-ec2:
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
           key: ${{ secrets.AWS_PRIVATE_KEY }}
           port: 22
           # Ditulis dalam satu baris menggunakan tanda koma tanpa spasi setelah koma
-          source: "web-dinamis/docker-compose.yml,web-dinamis/db_data/dbcompro_2388010027.sql"
+          source: "web-dinamis/docker-compose.yml,web-dinamis/db_data/dbcompro_2388010004.sql"
           target: "/home/ubuntu/container-dinamis"
 
       - name: Deploy Web Dinamis via SSH and run docker compose
