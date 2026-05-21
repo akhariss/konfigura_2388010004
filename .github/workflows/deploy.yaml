@@ -21,11 +21,11 @@ jobs:
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/konfigura_2388010004:latest
-
+with:
+  context: ./web-dinamis
+  file: ./web-dinamis/Dockerfile
+  push: true
+  tags: ${{ secrets.DOCKERHUB_USERNAME }}/konfigura_2388010004:latest
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v1.0.0
         with:
